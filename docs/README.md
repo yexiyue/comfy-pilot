@@ -5,7 +5,11 @@
 
 项目以本地 ComfyUI 为图像执行引擎，第一版面向博客封面创作。实现语言先用 TypeScript，后续按边界迁移 Rust。
 
+当前技术路线明确采用 **LangChain 基础组件 + LangGraph 自建创作循环**：先学习 Models、Messages、Tools，再学习图编排与上下文策略。初期不叠加 LangChain 的高层 createAgent 循环；Skills 提供按需加载的创作方法。
+
 ## 如何使用
+技术载体采用 React + Vite 与 NestJS，前后端同仓库，发布时由后端提供静态页面和 API；采用模块化单体、SQLite 与本地资产目录。
+
 1. 先读 [产品文档](product.md)，理解要做的用户体验。
 2. 读 [路线图](roadmap.md)，一次完成一个阶段。
 3. 按下表学习对应篇章。每篇只介绍知识、专业术语、设计问题和验收标准。
@@ -17,10 +21,13 @@
 |---|---|
 | [01](tutorials/01-agent-and-harness.md) | 从聊天到 agent：系统全貌 |
 | [02](tutorials/02-capabilities-and-workflows.md) | ComfyUI 能力与工具边界 |
+| [02B](tutorials/02b-engineering-foundation.md) | 产品载体与 NestJS 工程化骨架 |
 | [03](tutorials/03-brief-and-constraints.md) | 创作需求、结构化输出与约束 |
 | [04](tutorials/04-state-and-assets.md) | 任务状态、图片资产与版本 |
+| [04A](tutorials/04a-langchain-components.md) | LangChain 基础组件与职责边界 |
 | [05](tutorials/05-agent-loop.md) | Agent 循环与 LangGraph 编排 |
 | [06](tutorials/06-context-engineering.md) | 上下文工程 |
+| [06A](tutorials/06a-skills-and-orchestration.md) | Skills、工具与编排运行时 |
 | [07](tutorials/07-memory.md) | 短期状态与长期记忆 |
 | [08](tutorials/08-human-feedback.md) | 人工反馈、中断与恢复 |
 | [09](tutorials/09-reliable-execution.md) | 异步执行、重试与任务对账 |

@@ -6,6 +6,12 @@
 | Agent | 根据观察决定下一步的任务执行系统 | 01、05 |
 | Harness | 运行循环、上下文、工具环境和可靠性机制 | 01、12 |
 | Workflow | 由程序组织的步骤 | 01、02 |
+| LangChain | 模型、消息、工具等组件及高层 agent 抽象；本项目先用基础组件 | 04A |
+| LangGraph | 任务状态、步骤流转、中断与恢复的编排运行时 | 05 |
+| Chat model | 接收结构化消息的模型接口 | 04A |
+| Message | 带角色和内容的模型交互记录 | 04A |
+| Tool schema | 工具参数的结构与约束，需运行时校验 | 04A |
+| createAgent | LangChain 的高层 agent 入口，初期不采用 | 04A |
 | Tool calling | 模型提出工具请求，程序校验并执行 | 05 |
 | Capability | 环境实际具备的能力 | 02 |
 | Schema | 输入输出的数据约束 | 02、03 |
@@ -20,6 +26,11 @@
 | Compaction | 压缩历史信息 | 06 |
 | Offloading | 大资料外置，按需访问 | 06 |
 | Retrieval | 获取当前相关资料 | 06、07 |
+| Skill | 按需加载的专业方法、资料和可选脚本包 | 06A |
+| Progressive disclosure | 先摘要、后正文、再相关资料的渐进式披露 | 06A |
+| Skill discovery / activation | 发现可用技能与选择加载技能 | 06A |
+| Skill loader | 读取并组织技能内容的运行环境组件 | 06A |
+| Runtime | 实际协调执行、状态与资源的运行时 | 06A、12 |
 | Memory | 会话内或跨会话保存的有用信息 | 07 |
 | HITL | Human-in-the-loop，人工介入 | 08 |
 | Interrupt / Resume | 暂停与继续图运行 | 08 |

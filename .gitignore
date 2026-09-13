@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist-ssr/
+.output/
+.tanstack/
+coverage/
+*.tsbuildinfo
+*.log
+.env
+.env.*
+!.env.example
+data/
+.DS_Store

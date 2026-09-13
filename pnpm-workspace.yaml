@@ -1,0 +1,8 @@
+packages:
+  - 'app/*'
+  - 'packages/*'
+
+allowBuilds:
+  esbuild: true
+  lightningcss: true
+  '@nestjs/core': false
