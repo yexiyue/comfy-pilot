@@ -18,7 +18,7 @@ pnpm dev
 
 `pnpm build` 构建两端；`pnpm typecheck` 与 `pnpm lint` 检查两端；`pnpm test` 和 `pnpm test:e2e` 运行后端测试。依赖统一在根目录安装，维护一个锁文件；新增共享包时放入 `packages/`。
 
-已移除 NestJS 云端 Observe 的占位配置，后续有实际需求时再接入。环境文件、构建产物与运行数据不提交到 Git。
+NestJS Observe 可通过 `app/server/.env` 配置，变量见 `.env.example`。启动时读取本地配置，系统环境变量优先；两项凭据都未设置时不启用，只设置一项则报配置错误。设置 `OBSERVE_ENABLED=false` 可关闭，测试环境始终禁用且不加载本地凭据。启用后会向 NestJS Observe 上报服务遥测。环境文件、构建产物与运行数据不提交到 Git。
 
 ## 产品规划
 
